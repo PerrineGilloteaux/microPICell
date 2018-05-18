@@ -1,2 +1,4 @@
 # microPICell
-SCripots , macros used on the MicroPICell facility
+Scripts , macros used on the MicroPICell facility
+
+http://micropicell.univ-nantes.fr/ 
