@@ -1,0 +1,334 @@
+<protocol VERSION="4">
+<blocks>
+<block ID="146452761" blockType="plugins.adufour.blocks.tools.io.FileToSequence" className="plugins.adufour.blocks.tools.io.FileToSequence" collapsed="false" definedName="rouge" height="121" keepsResults="true" width="210" xLocation="17" yLocation="225">
+<variables>
+<input>
+<variable ID="input file" name="input file" runtime="false" value="C:\Users\paul-gilloteaux-p\Documents\PROJETS\miguel\rouge.tif" visible="true"/>
+<variable ID="Series" name="Series" runtime="false" value="0" visible="true"/>
+</input>
+<output>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="1354612361" blockType="plugins.tprovoost.sequenceblocks.remove.RemoveAllRois" className="plugins.tprovoost.sequenceblocks.SequenceBlocks" collapsed="false" definedName="Remove all rois" height="61" keepsResults="true" width="338" xLocation="181" yLocation="163">
+<variables>
+<input>
+<variable ID="sequence" name="Sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1047573770" blockType="plugins.adufour.thresholder.KMeansThresholdBlock" className="plugins.adufour.thresholder.Thresholder" collapsed="false" definedName="K means threshold" height="159" keepsResults="true" width="333" xLocation="510" yLocation="176">
+<variables>
+<input>
+<variable ID="Input" name="Input" runtime="false" visible="true"/>
+<variable ID="Channel" name="Channel" runtime="false" value="0" visible="true"/>
+<variable ID="Classes" name="Classes" runtime="false" value="2" visible="true"/>
+</input>
+<output>
+<variable ID="thresholds" name="thresholds" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="767938370" blockType="plugins.adufour.thresholder.Thresholder" className="plugins.adufour.thresholder.Thresholder" collapsed="false" definedName="Thresholder" height="215" keepsResults="true" width="420" xLocation="942" yLocation="277">
+<variables>
+<input>
+<variable ID="Input" name="Input" runtime="false" visible="true"/>
+<variable ID="channel" name="channel" runtime="false" value="0" visible="true"/>
+<variable ID="Manual thresholds" name="Manual thresholds" runtime="false" visible="true"/>
+<variable ID="Treat as percentiles" name="Treat as percentiles" runtime="false" value="false" visible="true"/>
+</input>
+<output>
+<variable ID="output" name="Binary output" runtime="false" visible="true"/>
+<variable ID="ROI" name="ROI" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="1600211132" blockType="plugins.adufour.blocks.tools.roi.AddROIToSequence" className="plugins.adufour.blocks.tools.roi.AddROIToSequence" collapsed="false" definedName="Add ROI fibro to rouge" height="122" keepsResults="true" width="358" xLocation="1653" yLocation="463">
+<variables>
+<input>
+<variable ID="target sequence" name="Source" runtime="false" visible="true"/>
+<variable ID="input rois" name="ROI to add" runtime="false" visible="true"/>
+<variable ID="replace existing" name="Overwrite" runtime="false" value="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="736520470" blockType="plugins.adufour.blocks.tools.io.FileToSequence" className="plugins.adufour.blocks.tools.io.FileToSequence" collapsed="false" definedName="Marron (apres deconv couleur)" height="121" keepsResults="true" width="271" xLocation="23" yLocation="368">
+<variables>
+<input>
+<variable ID="input file" name="input file" runtime="false" value="C:\Users\paul-gilloteaux-p\Documents\PROJETS\miguel\marron.tif" visible="true"/>
+<variable ID="Series" name="Series" runtime="false" value="0" visible="true"/>
+</input>
+<output>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="39970179" blockType="plugins.tprovoost.sequenceblocks.remove.RemoveAllRois" className="plugins.tprovoost.sequenceblocks.SequenceBlocks" collapsed="false" definedName="Remove all rois" height="61" keepsResults="true" width="289" xLocation="342" yLocation="446">
+<variables>
+<input>
+<variable ID="sequence" name="Sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1120844107" blockType="plugins.adufour.blocks.tools.Display" className="plugins.adufour.blocks.tools.Display" collapsed="false" definedName="Display" height="276" keepsResults="true" width="430" xLocation="135" yLocation="579">
+<variables>
+<input>
+<variable ID="object" name="object" runtime="false" type="icy.sequence.Sequence" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1164844873" blockType="plugins.adufour.thresholder.KMeansThresholdBlock" className="plugins.adufour.thresholder.Thresholder" collapsed="false" definedName="K means threshold" height="159" keepsResults="true" width="276" xLocation="316" yLocation="740">
+<variables>
+<input>
+<variable ID="Input" name="Input" runtime="false" visible="true"/>
+<variable ID="Channel" name="Channel" runtime="false" value="0" visible="true"/>
+<variable ID="Classes" name="Classes" runtime="false" value="2" visible="true"/>
+</input>
+<output>
+<variable ID="thresholds" name="thresholds" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="110556726" blockType="plugins.adufour.thresholder.Thresholder" className="plugins.adufour.thresholder.Thresholder" collapsed="false" definedName="Thresholder" height="215" keepsResults="true" width="363" xLocation="798" yLocation="881">
+<variables>
+<input>
+<variable ID="Input" name="Input" runtime="false" visible="true"/>
+<variable ID="channel" name="channel" runtime="false" value="0" visible="true"/>
+<variable ID="Manual thresholds" name="Manual thresholds" runtime="false" visible="true"/>
+<variable ID="Treat as percentiles" name="Treat as percentiles" runtime="false" value="false" visible="true"/>
+</input>
+<output>
+<variable ID="output" name="Binary output" runtime="false" visible="true"/>
+<variable ID="ROI" name="ROI" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="824046092" blockType="plugins.adufour.connectedcomponents.ConnectedComponents" className="plugins.adufour.connectedcomponents.ConnectedComponents" collapsed="false" definedName="Connected Components" height="190" keepsResults="true" width="490" xLocation="605" yLocation="985">
+<variables>
+<input>
+<variable ID="input" name="Input" runtime="false" visible="true"/>
+<variable ID="method" name="Extraction mode" runtime="false" value="BACKGROUND" visible="true"/>
+<variable ID="value" name="Value" runtime="false" value="0" visible="true"/>
+<variable ID="no edge (X)" name="Remove border objects (X)" runtime="false" value="false" visible="true"/>
+<variable ID="no edge (Y)" name="Remove border objects (Y)" runtime="false" value="false" visible="true"/>
+<variable ID="no edge (Z)" name="Remove border objects (Z)" runtime="false" value="false" visible="true"/>
+<variable ID="size filter" name="Filter objects by size" runtime="false" value="true" visible="true"/>
+<variable ID="min. size" name="Min. size" runtime="false" value="6" visible="true"/>
+<variable ID="max. size" name="Max. size" runtime="false" value="100000" visible="true"/>
+<variable ID="Export to Excel" name="Export to Excel" runtime="false" value="false" visible="true"/>
+<variable ID="Excel file" name="Excel file" runtime="false" value="" visible="true"/>
+</input>
+<output>
+<variable ID="labeled sequence" name="output" runtime="false" visible="true"/>
+<variable ID="objects" name="components" runtime="false" visible="true"/>
+<variable ID="list of extracted ROI" name="list of ROI" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="1991813428" blockType="plugins.adufour.blocks.tools.roi.AddROIToSequence" className="plugins.adufour.blocks.tools.roi.AddROIToSequence" collapsed="false" definedName="Add ROI tumeur to marron" height="129" keepsResults="true" width="358" xLocation="1229" yLocation="778">
+<variables>
+<input>
+<variable ID="target sequence" name="Source" runtime="false" visible="true"/>
+<variable ID="input rois" name="ROI to add" runtime="false" visible="true"/>
+<variable ID="replace existing" name="Overwrite" runtime="false" value="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="493288326" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="Show sequence" height="61" keepsResults="true" width="287" xLocation="1265" yLocation="927">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="253848100" blockType="plugins.adufour.distancetransforms.ROIToDistanceMap" className="plugins.adufour.distancetransforms.ROIToDistanceMap" collapsed="false" definedName="Distance Transforms" height="184" keepsResults="true" width="317" xLocation="1211" yLocation="1022">
+<variables>
+<input>
+<variable ID="Use ROI from" name="Sequence" runtime="false" visible="true"/>
+<variable ID="Algorithm" name="Algorithm" runtime="false" value="plugins.adufour.distancetransforms.Chamfer3" visible="true"/>
+<variable ID="Invert map" name="Invert map" runtime="false" value="false" visible="true"/>
+<variable ID="Real units" name="Use pixel size" runtime="false" value="false" visible="true"/>
+</input>
+<output>
+<variable ID="Distance map" name="Distance map" runtime="false" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="1136072360" blockType="plugins.tprovoost.sequenceblocks.infos.SetColormap" className="plugins.tprovoost.sequenceblocks.SequenceBlocks" collapsed="false" definedName="Set colormap" height="135" keepsResults="true" width="297" xLocation="1606" yLocation="1022">
+<variables>
+<input>
+<variable ID="input" name="Sequence" runtime="false" visible="true"/>
+<variable ID="numChannel" name="Channel" runtime="false" value="0" visible="true"/>
+<variable ID="colormap" name="Color map" runtime="false" value="JET" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="2085365429" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="Show Distance Map" height="61" keepsResults="true" width="344" xLocation="2004" yLocation="1034">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1744319341" blockType="plugins.adufour.blocks.tools.roi.AddROIToSequence" className="plugins.adufour.blocks.tools.roi.AddROIToSequence" collapsed="false" definedName="Add ROI fibro to distance map" height="122" keepsResults="true" width="358" xLocation="1789" yLocation="699">
+<variables>
+<input>
+<variable ID="target sequence" name="Source" runtime="false" visible="true"/>
+<variable ID="input rois" name="ROI to add" runtime="false" visible="true"/>
+<variable ID="replace existing" name="Overwrite" runtime="false" value="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block CommandLineID="" ID="977243210" blockType="plugins.adufour.blocks.tools.input.Decimal" className="plugins.adufour.blocks.tools.input.Decimal" collapsed="false" definedName="Taille un pixel en um" height="87" keepsResults="true" width="219" xLocation="36" yLocation="100">
+<variables>
+<input>
+<variable ID="decimal" name="decimal" runtime="false" value="7.93" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block CommandLineID="" ID="1755206271" blockType="plugins.adufour.blocks.tools.input.Decimal" className="plugins.adufour.blocks.tools.input.Decimal" collapsed="false" definedName="Taille des blocks en um" height="77" keepsResults="true" width="231" xLocation="23" yLocation="173">
+<variables>
+<input>
+<variable ID="decimal" name="decimal" runtime="false" value="500.0" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="686802665" blockType="plugins.tprovoost.scripteditor.scriptblock.Javascript" className="plugins.tprovoost.scripteditor.scriptblock.Javascript" collapsed="false" definedName="Distance et histogramme" height="332" keepsResults="true" width="390" xLocation="1460" yLocation="144">
+<variables>
+<input>
+<variable ID="Script" name="" runtime="false" value="importClass(Packages.icy.type.DataIterator)&#10;importClass(Packages.icy.image.IcyBufferedImage)&#10;&#10;importClass(Packages.icy.sequence.Sequence)&#10;importClass(Packages.icy.roi.ROIUtil)&#10;importClass(Packages.icy.sequence.SequenceUtil)&#10;importClass(Packages.icy.type.DataIteratorUtil)&#10;importClass(Packages.icy.sequence.SequenceDataIterator)&#10;importClass(Packages.java.io.File)&#10;importClass(Packages.icy.util.XLSUtil)&#10;importClass(Packages.plugins.ylemontag.histogram.Histogram)&#10;importClass(Packages.plugins.kernel.roi.descriptor.measure.ROIAreaDescriptor)&#10;importClass(Packages.icy.roi.ROI2DRectangle)&#10;importClass(Packages.icy.type.DataType)&#10;&#10;// Click on the button&#10;// to edit in a frame.&#10;&#10;filename=new File(input2.getAbsolutePath()+&quot;_results.xls&quot;)&#10;fibroRois=input0.getROIs()&#10;&#10;fibro=ROIUtil.getUnion(fibroRois)&#10;tumorRois=input4.getROIs()&#10;tumor=ROIUtil.getUnion(tumorRois)&#10;workbook= XLSUtil.createWorkbook(filename)&#10;page = XLSUtil.createNewPage(workbook, &quot;resultat&quot;)&#10;pagefibro = XLSUtil.createNewPage(workbook, &quot;resultatFibroOnly&quot;)&#10;sizepixel=input1&#10;nbBins=100// nb de barres&#10;minBin=0 //valeur de depart&#10;maxBin=256/sizepixel // distrace max en pixel&#10;numroi=0&#10;//println(&quot;coucou&quot;)&#10;XLSUtil.setCellString(page, 0, 0, &quot;ROI&quot;)&#10;XLSUtil.setCellString(page, 1, 0, &quot;Bin Central Value in um&quot;)&#10;XLSUtil.setCellString(page, 3, 0, &quot;Count&quot;)&#10;XLSUtil.setCellString(page, 2, 0, &quot;Normalized Count&quot;)&#10;XLSUtil.setCellString(pagefibro, 0, 0, &quot;ROI&quot;)&#10;XLSUtil.setCellString(pagefibro, 1, 0, &quot;Bin Central Value in um&quot;)&#10;XLSUtil.setCellString(pagefibro, 3, 0, &quot;Count&quot;)&#10;XLSUtil.setCellString(pagefibro, 2, 0, &quot;Normalized Count&quot;)&#10;//Do it first for the full distance map&#10;hist=Histogram.compute(input0, nbBins, minBin, maxBin)&#10;line=0&#10;//println(hist.getNbBins())&#10;totalcount=0&#10;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;bin = hist.getBin(i)&#10;&#9;totalcount=totalcount+bin.getCount()&#10;}&#10;&#10;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;bin = hist.getBin(i)&#10;&#9;//println(bin.getCentralValue())&#10;&#9;count=bin.getCount()&#10;&#9;//println(count)&#10;&#9;line=line+1&#10;&#9;XLSUtil.setCellNumber( page,0, line, numroi)&#10;&#9;XLSUtil.setCellNumber( page,1, line, input1*bin.getCentralValue())&#10;&#9;XLSUtil.setCellNumber( page,3, line, count)&#10;&#9;XLSUtil.setCellNumber( page,2, line, 100*count/totalcount)&#10;}&#10;hist=Histogram.compute(input0,fibro,true, nbBins, minBin, maxBin)&#10;distancemoyenne=ROIUtil.getMeanIntensity(input0,fibro)&#10;&#10;linefibro=0&#10;totalcount=0&#10;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;bin = hist.getBin(i)&#10;&#9;totalcount=totalcount+bin.getCount()&#10;}&#10;&#10;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;bin = hist.getBin(i)&#10;&#9;//println(bin.getCentralValue())&#10;&#9;count=bin.getCount()&#10;&#9;//println(count)&#10;&#9;linefibro=linefibro+1&#10;&#9;XLSUtil.setCellNumber( pagefibro,0, linefibro, numroi)&#10;&#9;XLSUtil.setCellNumber( pagefibro,1, linefibro, input1*bin.getCentralValue())&#10;&#9;XLSUtil.setCellNumber( pagefibro,3, linefibro, count)&#10;&#9;XLSUtil.setCellNumber( pagefibro,2, linefibro, 100*count/totalcount)&#10;}&#10;&#10;output1=new Sequence(new IcyBufferedImage(input0.getWidth(), input0.getHeight(),1, DataType.FLOAT))&#10;//DataIteratorUtil.set(new SequenceDataIterator(output1,0,0,0), 0);&#10;//DataIteratorUtil.set&#10;output1.setName(&quot;Distances moyennes&quot;)&#10;output2=new Sequence(new IcyBufferedImage(input0.getWidth(), input0.getHeight(),1, DataType.FLOAT))&#10;//DataIteratorUtil.set(new SequenceDataIterator(output1,0,0,0), 0);&#10;//DataIteratorUtil.set&#10;output2.setName(&quot;Densite Fibro&quot;)&#10;output3=new Sequence(new IcyBufferedImage(input0.getWidth(), input0.getHeight(),1, DataType.FLOAT))&#10;//DataIteratorUtil.set(new SequenceDataIterator(output1,0,0,0), 0);&#10;//DataIteratorUtil.set&#10;output3.setName(&quot;Densite Tumeur&quot;)&#10;DataIteratorUtil.set(new SequenceDataIterator(output1), distancemoyenne)&#10;&#10;//Do it then for each ROI &#10;// will be the intersection&#10;expectedsizeinum=input3&#10;input0.removeAllROI()&#10;size=expectedsizeinum/input1&#10;for ( y = 0 ; y &lt; input0.getHeight()-size ; y = y + size )&#10;{&#10;    for ( x = 0 ; x &lt; input0.getWidth()-size ; x = x + size )&#10;    {&#10;&#9;roi = new ROI2DRectangle( x , y , x+size , y+size )&#10;&#9;numroi=numroi+1&#10;&#9;roi.setName(&quot;Rect &quot;+numroi)&#10;&#9;input0.addROI( roi )&#10;&#9;hist=Histogram.compute(input0, roi, true, nbBins, minBin, maxBin)&#10;&#9;totalcount=0&#10;&#9;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;&#9;bin = hist.getBin(i)&#10;&#9;&#9;totalcount=totalcount+bin.getCount()&#10;&#9;}&#10;&#10;&#9;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;&#9;bin = hist.getBin(i)&#10;&#9;&#9;&#10;&#9;&#9;count=bin.getCount()&#10;&#9;&#9;&#10;&#9;&#9;line=line+1&#10;&#9;&#9;XLSUtil.setCellNumber( page,0, line, numroi)&#10;&#9;&#9;XLSUtil.setCellNumber( page,1, line, input1*bin.getCentralValue())&#10;&#9;&#9;XLSUtil.setCellNumber( page,3, line, count)&#10;&#9;&#9;XLSUtil.setCellNumber( page,2, line, 100*count/totalcount)&#10;&#9;}&#10;&#10;&#9;patchFibro=ROIUtil.getIntersection(roi, fibro)&#10;&#9;patchTumor=ROIUtil.getIntersection(roi, tumor)&#10;&#9;patchFibro.setName(&quot;pfib &quot;+numroi)&#10;&#9;patchTumor.setName(&quot;tum &quot;+numroi)&#10;&#9;distancemoyenne=ROIUtil.getMeanIntensity(input0,patchFibro)&#10;&#9;descriptor=new ROIAreaDescriptor() &#10;&#9;densitefibro=100*descriptor.compute(patchFibro, input0)/descriptor.compute(roi, input0)&#10;&#9;output2.addROI(roi)&#10;&#9;DataIteratorUtil.set(new SequenceDataIterator(output2, roi), densitefibro);&#10;&#9;densitetumor=100*descriptor.compute(patchTumor, input0)/descriptor.compute(roi, input0)&#10;&#9;output3.addROI(roi)&#10;&#9;DataIteratorUtil.set(new SequenceDataIterator(output3, roi), densitetumor);&#10;&#9;output1.addROI(roi)&#10;&#9;DataIteratorUtil.set(new SequenceDataIterator(output1, roi), distancemoyenne);&#10;&#9;input0.addROI( patchFibro)&#10;&#9;hist=Histogram.compute(input0, patchFibro, true, nbBins, minBin, maxBin)&#10;&#9;totalcount=0&#10;&#9;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;&#9;bin = hist.getBin(i)&#10;&#9;&#9;totalcount=totalcount+bin.getCount()&#10;&#9;}&#10;&#10;&#9;for (i = 0; i&lt;hist.getNbBins();i++){&#10;&#9;&#9;bin = hist.getBin(i)&#10;&#9;&#9;&#10;&#9;&#9;count=bin.getCount()&#10;&#9;&#9;&#10;&#9;&#9;linefibro=linefibro+1&#10;&#9;&#9;XLSUtil.setCellNumber( pagefibro,0, linefibro, numroi)&#10;&#9;&#9;XLSUtil.setCellNumber( pagefibro,1, linefibro, input1*bin.getCentralValue())&#10;&#9;&#9;XLSUtil.setCellNumber( pagefibro,3, linefibro, count)&#10;&#9;&#9;XLSUtil.setCellNumber( pagefibro,2, linefibro, 100*count/totalcount)&#10;&#9;}&#10;&#9;&#10;&#9;//input0.removeROI(roi)&#10;    }&#10;}&#10;&#10;output0=input0&#10;output1.updateChannelsBounds()&#10;output2.updateChannelsBounds()&#10;output3.updateChannelsBounds()&#10;// save xls file&#10;XLSUtil.saveAndClose( workbook )" visible="true"/>
+<variable ID="Add Input" name="Add Input" runtime="false" value="4" visible="true"/>
+<variable ID="Add output" name="Add output" runtime="false" value="3" visible="true"/>
+<variable ID="input0" name="input0" runtime="false" type="icy.sequence.Sequence" visible="true"/>
+<variable ID="715462778" name="input1" runtime="true" type="double" visible="true"/>
+<variable ID="1126551113" name="input2" runtime="true" type="java.io.File" visible="true"/>
+<variable ID="1302772845" name="input3" runtime="true" type="double" visible="true"/>
+<variable ID="1877807719" name="input4" runtime="true" type="icy.sequence.Sequence" visible="true"/>
+</input>
+<output>
+<variable ID="output0" name="output0" runtime="false" type="icy.sequence.Sequence" visible="true"/>
+<variable ID="1136900275" name="output1" runtime="true" type="icy.sequence.Sequence" visible="true"/>
+<variable ID="1919562268" name="output2" runtime="true" type="icy.sequence.Sequence" visible="true"/>
+<variable ID="219470875" name="output3" runtime="true" type="icy.sequence.Sequence" visible="true"/>
+</output>
+</variables>
+</block>
+<block ID="1874965393" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="Show sequence" height="61" keepsResults="true" width="287" xLocation="2459" yLocation="601">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1189284259" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="Show sequence" height="61" keepsResults="true" width="287" xLocation="1972" yLocation="269">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="107699840" blockType="plugins.tprovoost.sequenceblocks.infos.SetColormap" className="plugins.tprovoost.sequenceblocks.SequenceBlocks" collapsed="false" definedName="Set colormap" height="135" keepsResults="true" width="346" xLocation="992" yLocation="575">
+<variables>
+<input>
+<variable ID="input" name="Sequence" runtime="false" visible="true"/>
+<variable ID="numChannel" name="Channel" runtime="false" value="0" visible="true"/>
+<variable ID="colormap" name="Color map" runtime="false" value="JET" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1611072227" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="distmoyennFibro" height="61" keepsResults="true" width="336" xLocation="1415" yLocation="582">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="1058916019" blockType="plugins.tprovoost.sequenceblocks.infos.SetColormap" className="plugins.tprovoost.sequenceblocks.SequenceBlocks" collapsed="false" definedName="Set colormap" height="135" keepsResults="true" width="346" xLocation="1867" yLocation="823">
+<variables>
+<input>
+<variable ID="input" name="Sequence" runtime="false" visible="true"/>
+<variable ID="numChannel" name="Channel" runtime="false" value="0" visible="true"/>
+<variable ID="colormap" name="Color map" runtime="false" value="JET" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="355036091" blockType="plugins.tprovoost.sequenceblocks.infos.SetColormap" className="plugins.tprovoost.sequenceblocks.SequenceBlocks" collapsed="false" definedName="Set colormap" height="135" keepsResults="true" width="346" xLocation="1867" yLocation="956">
+<variables>
+<input>
+<variable ID="input" name="Sequence" runtime="false" visible="true"/>
+<variable ID="numChannel" name="Channel" runtime="false" value="0" visible="true"/>
+<variable ID="colormap" name="Color map" runtime="false" value="JET" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="813492086" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="Show sequence" height="61" keepsResults="true" width="336" xLocation="2269" yLocation="968">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+<block ID="999095628" blockType="plugins.adufour.blocks.tools.sequence.ShowSequence" className="plugins.adufour.blocks.tools.sequence.ShowSequence" collapsed="false" definedName="Show sequence" height="61" keepsResults="true" width="336" xLocation="2239" yLocation="832">
+<variables>
+<input>
+<variable ID="sequence" name="sequence" runtime="false" visible="true"/>
+</input>
+<output/>
+</variables>
+</block>
+</blocks>
+<links>
+<link dstBlockID="1354612361" dstVarID="sequence" srcBlockID="146452761" srcVarID="sequence"/>
+<link dstBlockID="686802665" dstVarID="1126551113" srcBlockID="146452761" srcVarID="input file"/>
+<link dstBlockID="1047573770" dstVarID="Input" srcBlockID="1354612361" srcVarID="sequence"/>
+<link dstBlockID="767938370" dstVarID="Manual thresholds" srcBlockID="1047573770" srcVarID="thresholds"/>
+<link dstBlockID="767938370" dstVarID="Input" srcBlockID="1047573770" srcVarID="Input"/>
+<link dstBlockID="1600211132" dstVarID="target sequence" srcBlockID="767938370" srcVarID="Input"/>
+<link dstBlockID="1600211132" dstVarID="input rois" srcBlockID="767938370" srcVarID="ROI"/>
+<link dstBlockID="1744319341" dstVarID="input rois" srcBlockID="1600211132" srcVarID="input rois"/>
+<link dstBlockID="1189284259" dstVarID="sequence" srcBlockID="1600211132" srcVarID="target sequence"/>
+<link dstBlockID="39970179" dstVarID="sequence" srcBlockID="736520470" srcVarID="sequence"/>
+<link dstBlockID="1120844107" dstVarID="object" srcBlockID="39970179" srcVarID="sequence"/>
+<link dstBlockID="1164844873" dstVarID="Input" srcBlockID="1120844107" srcVarID="object" srcVarType="icy.sequence.Sequence"/>
+<link dstBlockID="110556726" dstVarID="Manual thresholds" srcBlockID="1164844873" srcVarID="thresholds"/>
+<link dstBlockID="110556726" dstVarID="Input" srcBlockID="1164844873" srcVarID="Input"/>
+<link dstBlockID="1991813428" dstVarID="target sequence" srcBlockID="110556726" srcVarID="Input"/>
+<link dstBlockID="824046092" dstVarID="input" srcBlockID="110556726" srcVarID="output"/>
+<link dstBlockID="1991813428" dstVarID="input rois" srcBlockID="824046092" srcVarID="list of extracted ROI"/>
+<link dstBlockID="493288326" dstVarID="sequence" srcBlockID="1991813428" srcVarID="target sequence"/>
+<link dstBlockID="253848100" dstVarID="Use ROI from" srcBlockID="493288326" srcVarID="sequence"/>
+<link dstBlockID="1744319341" dstVarID="target sequence" srcBlockID="2085365429" srcVarID="sequence"/>
+<link dstBlockID="686802665" dstVarID="input0" srcBlockID="1744319341" srcVarID="target sequence"/>
+<link dstBlockID="686802665" dstVarID="715462778" srcBlockID="977243210" srcVarID="decimal"/>
+<link dstBlockID="1874965393" dstVarID="sequence" srcBlockID="686802665" srcVarID="output0" srcVarType="icy.sequence.Sequence"/>
+<link dstBlockID="1136072360" dstVarID="input" srcBlockID="253848100" srcVarID="Distance map"/>
+<link dstBlockID="2085365429" dstVarID="sequence" srcBlockID="1136072360" srcVarID="input"/>
+<link dstBlockID="686802665" dstVarID="1302772845" srcBlockID="1755206271" srcVarID="decimal"/>
+<link dstBlockID="107699840" dstVarID="input" srcBlockID="686802665" srcVarID="1136900275" srcVarType="icy.sequence.Sequence"/>
+<link dstBlockID="1611072227" dstVarID="sequence" srcBlockID="107699840" srcVarID="input"/>
+<link dstBlockID="999095628" dstVarID="sequence" srcBlockID="1058916019" srcVarID="input"/>
+<link dstBlockID="813492086" dstVarID="sequence" srcBlockID="355036091" srcVarID="input"/>
+<link dstBlockID="1058916019" dstVarID="input" srcBlockID="686802665" srcVarID="1919562268" srcVarType="icy.sequence.Sequence"/>
+<link dstBlockID="355036091" dstVarID="input" srcBlockID="686802665" srcVarID="219470875" srcVarType="icy.sequence.Sequence"/>
+<link dstBlockID="686802665" dstVarID="1877807719" srcBlockID="1991813428" srcVarID="target sequence"/>
+</links>
+</protocol>
