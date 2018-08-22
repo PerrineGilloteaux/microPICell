@@ -1,0 +1,30 @@
+path = File.openDialog("Select a File TUJ");
+open(path);
+rename("TUJ");
+run("8-bit");
+run("Auto Local Threshold", "method=Median radius=15 parameter_1=0 parameter_2=0 white");
+run("Median...", "radius=2");
+run("Invert");
+run("Set Measurements...", "redirect=[TUJ] decimal=3");
+run("Analyze Particles...", "size=10000-Infinity pixel show=Masks");
+setAutoThreshold("Default dark");
+run("Convert to Mask");
+run("Distance Map");
+selectWindow("TUJ");
+close();
+
+path = File.openDialog("Select a File AGS - GFP");
+open(path);
+rename("AGS - GFP");
+run("8-bit");
+run("Auto Local Threshold", "method=Bernsen radius=15 parameter_1=0 parameter_2=0 white");
+run("Invert");
+run("Watershed");
+run("Set Measurements...", "min redirect=[Mask of TUJ] decimal=3");
+run("Analyze Particles...", "display summarize add");
+close();
+
+selectWindow("Mask of TUJ");
+selectWindow("ROI Manager");
+roiManager("Show All");
+run("Distribution...", "parameter=Min or=110 and=0-110");
