@@ -1,0 +1,1 @@
+For ICY Plugin: do NOT downlad the .java, simply look for the name of the plugin in Icy search bar to install it. 
