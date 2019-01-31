@@ -1,0 +1,1 @@
+Macro template to list files recursively in dirtectories and apply an opreation: here from a list of 2D png files named lab_000xxx.png, create stacks and saves them as tiff.
