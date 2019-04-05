@@ -5,3 +5,4 @@ ROI for cell seg should be saved
 Expected input files
 Draw the cell ; Give the flow intensity, and the frame when flow change
 
+WARNING: working only with Fiji including ImageJ 1.51w, NOT ABOVE (quimp command line problem)
