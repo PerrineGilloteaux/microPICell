@@ -1,0 +1,8 @@
+Microdissecteur
+Slide
+S1:Mid,S2:Up,S3:Down
+Fluorescence
+ImageJ
+1;2
+CD23,CD55
+CD23
