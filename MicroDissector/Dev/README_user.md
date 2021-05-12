@@ -12,7 +12,7 @@
 
 When running the program, a first form opens allowing you to work with the microdissecteur:
 
-![form1](form1.png)
+![form1](form1.PNG)
 
 - `Init`: only on demo server, checks if server is running
 
@@ -46,7 +46,7 @@ When running the program, a first form opens allowing you to work with the micro
 
 When the `Predict` button is clicked, a second form opens:
 
-![form2](form2.png)
+![form2](form2.PNG)
 
 - `Analysis`: the type of analysis you want to run (for now, just the logiciel name)
 
@@ -64,7 +64,7 @@ When the `Predict` button is clicked, a second form opens:
 
 Another feature only displays if you chose the **fluorescence staining**:
 
-![form3](form3.png)
+![form3](form3.PNG)
 
 - `Add channel`: add a channel
 
