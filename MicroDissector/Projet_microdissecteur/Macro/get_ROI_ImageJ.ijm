@@ -22,10 +22,11 @@ s = split(title, ".");
 str = s[0]+"_roi-";
 
 //Make selection and get ROI
-//makeOval(334, 586, 528, 434);
+makeOval(334, 586, 528, 434);
+roiManager("add");
 setTool("freehand");
 waitForUser("Choose the region to analyse and press OK.")
-roiManager("add");
+
 
 //Get & save results in .csv file named after the image
 n = roiManager("count");
