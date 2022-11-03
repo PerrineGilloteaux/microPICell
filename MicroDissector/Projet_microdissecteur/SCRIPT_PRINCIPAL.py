@@ -80,8 +80,8 @@ try:
             reader = csv.DictReader(f)
             print(";".join(reader.fieldnames))
             for row in reader:
-                X = int(row["X"]) * scale + float(info[5][0]) - boundingboxleft - midX #Change X coordinates depending on rescaling (with info[5][0] : X coord of acquired image)
-                Y = int(row["Y"]) * scale + float(info[5][1]) - boundingboxtop - midY #Change Y coordinates depending on rescaling (with info[5][1] : Y coord of acquired image)
+                X = float(row["X"]) * scale + float(info[5][0]) - boundingboxleft - midX #Change X coordinates depending on rescaling (with info[5][0] : X coord of acquired image)
+                Y = float(row["Y"]) * scale + float(info[5][1]) - boundingboxtop - midY #Change Y coordinates depending on rescaling (with info[5][1] : Y coord of acquired image)
                 row["X"] = (str(X))
                 row["Y"] = (str(Y))
                 print(";".join([row[' '], row["Coord"], row["X"], row["Y"]]))
